@@ -1,0 +1,43 @@
+class Student{
+  var favorite: String = ""
+  var num_courses : Int = 0
+
+  init(course_name: String, num_courses: Int)
+  {
+    self.favorite=course_name
+    self.num_courses=num_courses
+  }
+
+  func Describe_Student() -> String {
+    return "The students favorite course is \(favorite) and he has \(num_courses) courses"
+  }
+}
+
+let student = Student(course_name:"CSCI 3055",num_courses:5)
+print(student.Describe_Student()) //=> The students favoritte course is CSCI 3055 and he has 5 courses
+
+
+/*
+Because Swift is based on Objective-C, it supports struct as well,
+one of the difference between struct and classes it that classes
+are pased by refernce while structs are passed as values
+*/
+
+struct student_id{
+  var Student_ID: String = ""
+
+  func Describe_Student() -> String {
+    return "The Student ID is \(Student_ID)"
+  }
+}
+ let Mushfequr = student_id(Student_ID : "567890")
+ print(Mushfequr.Describe_Student())  //=> Mushys-MacBook-Air:Final_project mustafizur$
+
+var My_List=[5, 6, 7,8]
+var My_Hashmap: [String:String] = ["Jordan":"Basketball Player",
+"Alex" :"Astrologist"];
+
+print(My_List)  //=> [5, 6, 7, 8]
+print(My_Hashmap["Jordan"] as Any) //=> Optional("Basketball Player") any to force
+// the compiler to recognize that any varible might be passed and Optional exists
+// in the output as  the return variable might be empty
