@@ -30,6 +30,13 @@ code in the actions which happen when a button is clicked or what to load into I
 
 If you wish to see how these two files were used in this project, head on over to standard application/standard application
 to find the View Contoller.swift
+
+# IMPLEMENTING AN OPEN SOURCE LIBRARY
+In this application, we have used the aid of the Kingfisher opensource library to help us quickly load images from the web
+or a file url into an ImageView in our layout. 
+
+The benifit of Kingfisher is that it lets us not worry about the back end of Image processing and we dont have to worry about
+dealing with bitmaps or other raw data when we try to load an image. All we do is call Kingfisher object from our code and quickly loads the Image from the Url that we provide. 
 		
 
 		
