@@ -31,6 +31,10 @@ class ViewController: UIViewController {
             (status) in if (status) == .authorized
             {
              self.Play_Music(genre: "Pop")
+             //In this section we will use the Kingfisher open
+             //sourced librarly to quickly load images onto the Image View
+              let url = URL(string: "www.google.ca/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjS6p7B7JjfAhWtqIMKHdQ4AjUQjRx6BAgBEAU&url=https%3A%2F%2Fwww.vulture.com%2F2017%2F12%2Fdefining-the-decade-in-pop-music.html&psig=AOvVaw0k8b3JeewE00SphsT-oUHJ&ust=1544654484805702)")
+               KingFisher.kf.setImage(with: url)
             }
         }
     }
