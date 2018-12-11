@@ -38,6 +38,52 @@ var My_Hashmap: [String:String] = ["Jordan":"Basketball Player",
 "Alex" :"Astrologist"];
 
 print(My_List)  //=> [5, 6, 7, 8]
-print(My_Hashmap["Jordan"] as Any) //=> Optional("Basketball Player") any to force
-// the compiler to recognize that any varible might be passed and Optional exists
-// in the output as  the return variable might be empty
+print(My_Hashmap["Jordan"] as Any) //=> Optional("Basketball Player") 
+//any  is used to force the compiler to recognize that any varible might be passed 
+//Optional exists in the output as  the return variable might be empty
+
+/* 
+ Just like any modern Language, we can implement the map,filter and reduce funtions to our 
+ data structures,
+ For example:
+ */
+ 
+ let product_of_two = my_list.map( my_list return my_list*2)
+ 
+ /* we can call the sorted functiongs from the standard libray to sort our list painlessly and quickly  */
+ let sorted_list=my_list.sorted()
+ 
+ /* 
+ Now we are going to look at some implementations of standard library protocols that help us in designing our code
+ For example some of them are debugPrint,debugDescription that print out description of the variable to help us with
+ our debugging.
+ 
+ */
+ 
+ //Below we have an example of this:
+ 
+ //We create a data structure of DateIndex.
+ struct DateIndex {
+    let date: Date
+}
+ 
+//Here we see an example of closure in the Swift Languuage where we implement
+//Calender using the data DataStrcutre within the scope of Calender.
+let calendar = Calendar.current
+extension DateIndex {
+    init(_ date: Date) {
+        self.date = calendar.startOfDay(for: date)
+    }
+}
+
+let dateFormatter = DateFormatter()
+dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "MMMM d", options: 0, locale: .current)
+
+//Here we use the protocol CustomDebugStringConvertible to implement an extension of dataFormattter function
+//such that it returns a debug description of the String that we are converting to data.
+extension DateIndex: CustomDebugStringConvertible {
+    var debugDescription: String {
+        return dateFormatter.string(from: date)
+    }
+}
+ 
