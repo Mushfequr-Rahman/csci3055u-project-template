@@ -28,3 +28,18 @@ for number in My_List
   sum += number
 }
 print(sum) //=>26
+
+/* Now we will implement a function in Swift to see that while it is similar
+in structure to C++ code, it is also vastly different in syntax notation and 
+makes it much easier for the programmer
+*/
+
+func (side :Double) -> Double
+{
+ return Double*Double
+}
+
+//If we had used C++, we are  required to include the return type as well before the function
+//But in swift creating a function is as simple as calling the keyword func before the name and assigning an 
+//arrow to sefine the return type.
+//coding in the definntion.
